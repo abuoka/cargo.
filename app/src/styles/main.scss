@@ -1,0 +1,53 @@
+@import './layout/_fonts',
+        './layout/_var',
+        './layout/_nav',
+        './layout/_header',
+        './component/_slider',
+        './component/_apply',
+        './component/_choose',
+        './component/_option',
+        './component/_service',
+        './component/_accardion',
+        './layout/_footer';
+        
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+    list-style: none;
+}
+body{
+    background: #282B38;
+}
+.container{
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.section__title{
+    font-weight: 700;
+    font-size: 36px;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 85px;
+        height: 2px;
+        background: $gold;
+        bottom: 0;
+    }
+    @include media(600){
+        font-size: 30px;
+    }
+    @include media(600){
+        font-size: 25px;
+    }
+}

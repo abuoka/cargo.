@@ -1,0 +1,139 @@
+.slider{
+    height: 700px;
+    width: 95%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 20px;
+
+    @media (max-width:576px) {
+        height: 400px;
+        width: 95%;
+    }
+    &__info{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.5),rgba(255, 255, 255, 0));
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 70px;
+        color: #fff;
+        width: 460px;
+
+        @include media(576){
+            font-size: 30px;
+            line-height: 36px;
+            width: 100%;
+            text-align: center;
+        }
+
+    }
+    &__text{
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 27px;
+        color: #fff;
+        width: 340px;
+        margin-bottom: 37px;
+        @include media(576){
+            font-size: 16px;
+            line-height: 20px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &__btn{
+        width: 293px;
+        padding: 22px 0;
+        background: $gold;
+        border-radius: 90px;
+        border: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        &:hover{
+            background: $green;
+        }
+        @include media(576){
+            margin: auto;
+            padding: 18px 0;
+        }
+
+        & span{
+            font-weight: 600;
+            font-size: 16px;
+            color: #fff;
+        }
+        & i{
+            color: #B26519;
+            font-size: 26px;
+
+            &::after{
+                content: '\f0a9';
+            }
+        }
+    }
+    &__inner{
+        width: 100%;
+        height: 100%;
+    }
+    &__item{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        transition: 0.5s;
+        opacity: 0;
+        &.active{
+            z-index: 1;
+            opacity: 1;
+        }
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+    }
+    &__left, &__right{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 15%;
+        z-index: 100;
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+    &__left{
+        left: 0;
+        & i{
+            font-size: 41px;
+            color: #fff;
+            
+            &::after{
+                content: '\f053';
+            }
+        }
+    }
+    &__right{
+        right: 0;
+        & i{
+            font-size: 41px;
+            color: #fff;
+            
+            &::after{
+                content: '\f054';
+            }
+        }
+    }
+}

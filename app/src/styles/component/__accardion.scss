@@ -1,0 +1,127 @@
+.accardion{
+    margin-top: 80px;
+
+    & .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__block{
+        width: 680px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    &__box{
+        width: 100%;
+        border: 1px solid #3A444E;
+        border-radius: 10px;
+        padding: 22px 20px 22px 34px;
+        margin-bottom: 15px;
+        transition: all .5s;
+
+        &.active{
+            background: #fff;
+            .accardion__body{
+                display: block;
+                margin-top: 10px;
+            }
+            .accardion__title{
+                color: #282B38;
+                &::after{
+                    color: $gold;
+                    content: "\f0aa";
+                }
+            }
+        }
+    }
+    &__head{
+
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &::after{
+            color: #fff;
+            content: "\f0a9";
+        }
+    }
+    &__body{
+        display: none;
+    }
+    &__text{
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 24px;
+        color: #282B38;
+    }
+    &__question{
+        width: 390px;
+        background: $gray;
+        box-shadow: 5px 15px 40px rgba(11, 24, 97, 0.32);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        padding: 38px 40px;
+    }
+    &__question-title{
+        font-weight: 700;
+        font-size: 24px;
+        color: #fff;
+        margin-bottom: 8px;
+        transition: all .5s;
+    }
+    &__question-text{
+        font-weight: 400;
+        font-size: 17px;
+        color: #fff;
+        margin-bottom: 23px;
+    }
+    &__input{
+        background: #fff;
+        padding: 20px;
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 14px;
+    }
+    &__area{
+        background: #fff;
+        padding: 20px;
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 14px;
+    }
+    &__btn{
+        width: 100%;
+        padding: 22px 0px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 90px;
+        background: $gold;
+        border: none;
+
+        &:hover{
+            background: $green;
+        }
+
+        & span{
+            font-weight: 600;
+            font-size: 16px;
+            color: #fff;
+        }
+        & i{
+            color: #B16519;
+            font-size: 26px;
+            &::after{
+                content: "\f0a9";
+            }
+        }
+    }
+}
